@@ -34,8 +34,26 @@ header, footer{
 }
 
 h1{
-	font-size: 64px;
+	font-size: 64rem;
 	padding: 200px 0 10px 0;
+}
+
+h2{
+	font-size: 32rem;
+	text-align: center;
+	padding: 90px 0 0 0;
+}
+h2::before {
+  content: '';
+  position: absolute;
+  left: 50%;
+  bottom: -8px;
+  display: inline-block;
+  width: 70px;
+  height: 3px;
+  transform: translateX(-50%);
+  background-color: #ec715f;
+  border-radius: 2px;
 }
 /*======================
 header
