@@ -25,6 +25,7 @@ a:link, a:visited, a:hover, a:active{
 body{
  	color: #000;
  	font-size: 16rem;
+	line-height: 1.5;
  	font-family: "Hiragino Kaku Gothic ProN",  Meiryo,  sans-serif;
 }
 
@@ -36,12 +37,14 @@ header, footer{
 h1{
 	font-size: 64rem;
 	padding: 200px 0 10px 0;
+	font-weight: bold;
 }
 
 h2{
 	font-size: 32rem;
 	text-align: center;
 	position: relative;
+	font-weight: bold;
 }
 h2::before {
   content: '';
@@ -55,12 +58,22 @@ h2::before {
   background-color: #ec715f;
   border-radius: 2px;
 }
+h3{
+	font-size: 20rem;
+	margin: 10px 0;
+	font-weight: bold;
+}
+
 .contents{
 	padding: 90px 0;
 }
 .lead{
 	padding: 38px 0 30px 0;
 	text-align: center;
+}
+.lead2{
+	margin: 5px 0 20px 0;
+	text-align: left;
 }
 /*======================
 header
@@ -79,32 +92,6 @@ header
 .back_color{
 	background-color: #eceff1;
 }
-/*======================
-main
-======================*/
-
-.top_img{
-	height: 650px;
-	background: url("../img/code.png");
-	background-size: cover;
-}
-
-.portfolio{
-	width: 920px;
-	margin: 0 auto;
-}
-.feature{
-	width: 980px;
-	margin: 0 auto;
-}
-.profile{
-	width: 1024px;
-	margin: 0 auto;
-}
-.contact{
-	width: 800px;
-	margin: 0 auto;
-}
 .gnav ul{
 	display: flex;
 	height: 70px;
@@ -114,14 +101,130 @@ main
 	margin: 0 30px;
 	align-self: center;
 }
-
 .gnav ul li a{
 	font-size: 16rem;
+}
+/*======================
+main
+======================*/
+
+
+/*======================
+top_img
+======================*/
+.top_img{
+	height: 650px;
+	background: url("../img/code.png");
+	background-size: cover;
 }
 .site_title{
 	text-align: center;
 	color: #fafafa;
 }
+
+/*======================
+portfolio
+======================*/
+.portfolio{
+	width: 920px;
+	margin: 0 auto;
+}
+.portfolio_img{
+	display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+.portfolio img{
+	width: 300px;
+	height: 250px;
+	margin-bottom: 10px;
+}
+
+
+
+
+/*======================
+feature
+======================*/
+.feature{
+	width: 980px;
+	margin: 0 auto;
+}
+.feature-wrap{
+	display: flex;
+	justify-content: space-between;
+}
+.feature-item{
+	width: 320px;
+	text-align: center;
+}
+.feature-item i{
+		font-size: 60rem;
+}
+
+
+/*======================
+profile
+======================*/
+.profile{
+	width: 1024px;
+	margin: 0 auto;
+}
+.profile_wrap{
+	display: flex;
+	justify-content: center;
+}
+.profile_left, .profile_right{
+	width: 512px;
+}
+.profile_left{
+	align-self: center;
+	display: flex;
+	justify-content: center;
+}
+.profile_left img{
+	width: 250px;
+	height: 250px;
+	border-radius: 50%;
+}
+
+
+
+/*======================
+contact
+======================*/
+.contact{
+	width: 800px;
+	margin: 0 auto;
+}
+.contact_wrap{
+	display: flex;
+	justify-content: center;
+}
+.contact_left, .contact_right{
+	width: 400px;
+}
+.contact_right ul{
+	display: flex;
+}
+.contact_right ul li{
+	margin-right: 20px;
+}
+.contact_right ul li a{
+	color: #000;
+}
+.contact_right ul li a i{
+	font-size: 50px;
+}
+.contact_left_wrap, .contact_right_wrap{
+	margin-left: 120px;
+}
+
+
+
+
+
+
 /*======================
 footer
 ======================*/
