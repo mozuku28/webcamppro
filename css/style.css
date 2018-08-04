@@ -17,9 +17,15 @@ a:link, a:visited, a:hover, a:active{
  	display: block;
  	clear: both;
 }
-
-.hidden{
- 	display: none;
+@media screen and (min-width:767px) {
+	.pc_hidden{
+	 	display: none;
+	}
+}
+@media screen and (max-width:767px) {
+	.sp_hidden{
+	 	display: none;
+	}
 }
 
 body{
@@ -28,14 +34,6 @@ body{
 	line-height: 1.5;
  	font-family: "Hiragino Kaku Gothic ProN",  Meiryo,  sans-serif;
 }
-
-@media screen and (max-width:767px) {
-  body{
-  	width: 90%;
-  	margin: 0 auto;
-  }
-}
-
 
 header, footer{
 	color: #fafafa;
@@ -103,7 +101,7 @@ header
 	.header_wrap i{
 		align-self: center;
 		font-size: 44rem;
-		padding-right: 8px;
+		padding: 15px 8px 0 0;
 	}
 }
 
@@ -123,6 +121,43 @@ header
 .gnav ul li a{
 	font-size: 16rem;
 }
+
+@media screen and (max-width:767px) {
+	#menu{
+		width: 100%;
+		position: absolute;
+		top: 0
+		left: 0;
+		right: 0;
+		background: rgba(0, 0, 0, 0.9);
+		color: #fff;
+		display: none;
+	}
+	#menu ul{
+		list-style: none;
+		margin: 0;
+		padding: 10px 20px;
+		display: block;
+		height: auto;
+		float: left;
+	}
+	#menu ul li{
+		line-height: 2;
+}
+	#menu ul li a{
+		text-decoration: none;
+		color: inherit;
+	}
+	#menu.shown{
+		display: block;
+	}
+	#close_menu{
+		padding: 15px 30px 0 0;
+		float: right;
+		cursor: pointer;
+	}
+}
+
 /*======================
 main
 ======================*/
@@ -166,6 +201,7 @@ portfolio
 .portfolio_img img{
 	width: 300px;
 	height: 250px;
+	object-fit: cover;
 	margin-bottom: 10px;
 }
 @media screen and (max-width:767px) {

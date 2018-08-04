@@ -14,13 +14,18 @@
 			<div class="main_logo">
 				<a href="#"><img src="./img/logo.png" alt="メインロゴ"></a>
 			</div>
-			<i id="open_menu" class="fas fa-bars"></i>
-			<nav class="gnav hidden">
+			<div class="menu_icon pc_hidden">
+				<i id="open_menu" class="fas fa-bars pc_hidden"></i>
+			</div>
+			<nav id="menu" class="gnav">
+				<div class="menu_icon pc_hidden">
+					<i id="close_menu"class="fas fa-times pc_hidden"></i>
+				</div>
 				<ul>
-					<li><a href="#">Portfolio</a></li>
-					<li><a href="#">Feature</a></li>
-					<li><a href="#">Profile</a></li>
-					<li><a href="#">Contact</a></li>
+					<li><a href="#Portfolio">Portfolio</a></li>
+					<li><a href="#Feature">Feature</a></li>
+					<li><a href="#Profile">Profile</a></li>
+					<li><a href="#Contact">Contact</a></li>
 				</ul>
 			</nav>
 		</div>
@@ -33,7 +38,7 @@
 			</div>
 		</div>
 		<div class="contents">
-			<div class="portfolio">
+			<div id="Portfolio" class="portfolio">
 				<h2>Portfolio</h2>
 				<p class="lead">
 					it is a long established fact that a reader will be distracted by the readadle<br>
@@ -41,17 +46,17 @@
 					The point of using Lorem lpsum is that it has a more-or-less normal distribution of letters
 				</p>
 				<div class="portfolio_img">
-					<img class="hidden" src="./img/sketch.jpg" alt="">
+					<img class="sp_hidden" src="./img/sketch.jpg" alt="">
 					<img src="./img/websuku.png" alt="">
-					<img class="hidden" src="./img/write.jpg" alt="">
+					<img class="sp_hidden" src="./img/write.jpg" alt="">
 					<img src="./img/webcamp.png" alt="">
-					<img class="hidden" src="./img/talk.jpg" alt="">
+					<img class="sp_hidden" src="./img/talk.jpg" alt="">
 					<img src="./img/webcamp-mother.png" alt="">
 				</div>
 			</div>
 		</div>
 		<div class="contents">
-			<div class="feature">
+			<div id="Feature" class="feature">
 				<h2>Feature</h2>
 				<p class="lead">
 					it is a long established fact that a reader will be distracted by the readadle<br>
@@ -84,7 +89,7 @@
 			</div>
 		</div>
 		<div class="contents">
-			<div class="profile">
+			<div id="Profile" class="profile">
 				<h2>Profile</h2>
 				<p class="lead">
 					it is a long established fact that a reader will be distracted by the readadle<br>
@@ -105,7 +110,7 @@
 			</div>
 		</div>
 		<div class="contents">
-			<div class="contact">
+			<div id="Contact" class="contact">
 				<h2>Contact</h2>
 				<p class="lead">
 					it is a long established fact that a reader will be distracted by the readadle<br>
@@ -138,5 +143,23 @@
 	<footer>
 		<div class="copyright">©︎ 2017 WebCamp</div>
 	</footer>
+	<script>
+		(function(){
+			'use strict';
+
+			var openMenu = document.getElementById('open_menu');
+			var closeMenu = document.getElementById('close_menu');
+			var menu = document.getElementById('menu');
+
+			openMenu.addEventListener('click',function(){
+				menu.classList.add('shown');
+			});
+			closeMenu.addEventListener('click',function(){
+				menu.classList.remove('shown');
+			});
+
+		})();
+
+	</script>
 </body>
 </html>
