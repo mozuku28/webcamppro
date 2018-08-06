@@ -348,9 +348,15 @@ contact
 .contact_right ul li a i{
 	font-size: 50px;
 }
-.contact_left_wrap, .contact_right_wrap{
-	margin-left: 120px;
+.contact_left_wrap{
+	width: 130px;
+	margin: 0 auto;
 }
+.contact_right_wrap{
+	width: 170px;
+	margin: 0 auto;
+}
+
 @media screen and (max-width:767px) {
 	.contact_left_wrap, .contact_right_wrap{
 		margin: 0 auto;
